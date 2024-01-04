@@ -42,3 +42,19 @@
 
 ### Abschluss und Dokumentation
 - [ ] Projekt-Dokumentation vervollständigt
+
+
+## Dokumentation
+
+
+#### Docker
+
+
+docker build -t techdemo-heigl-kaitoua .
+docker run -d -p 8080:80 --name my-blazor-app techdemo-heigl-kaitoua
+
+
+
+#### Build-Pipeline
+
+Eine Build-Pipeline ist eine Reihe von Schritten, die ausgeführt werden, um eine Anwendung zu bauen. Dies kann durch die Verwendung von Build-Servern wie Jenkins oder TeamCity erreicht werden. Diese Server können so konfiguriert werden, dass sie bei jedem Code-Check-in einen Build auslösen. Dies stellt sicher, dass die Software jederzeit gebaut werden kann.
