@@ -23,7 +23,7 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: ./techdemo-heigl-kaitoua
+      working-directory: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua
 
     - name: Build
       run: dotnet build --no-restore -c Release
