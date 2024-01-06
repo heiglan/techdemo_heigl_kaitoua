@@ -27,7 +27,7 @@ jobs:
 
     - name: Build
       run: dotnet build --no-restore -c Release
-      working-directory: ./techdemo-heigl-kaitoua
+      working-directory: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua
 
     - name: Run tests
       run: dotnet test --no-build -c Release
