@@ -55,6 +55,8 @@ keine Datenbank vorhanden
 docker build -t techdemo-heigl-kaitoua .
 docker run -d -p 8080:80 --name techdemo-heigl-kaitoua techdemo-heigl-kaitoua
 
+docker tag techdemo-heigl-kaitoua techdemo-heigl-kaitoua
+
 
 
 #### Build-Pipeline
