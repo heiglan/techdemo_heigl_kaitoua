@@ -44,9 +44,11 @@ keine Datenbank vorhanden
 
 ### Abschluss und Dokumentation
 - [ ] Projekt-Dokumentation vervollständigt
+- [ ]  
 
 
 ## Dokumentation
+- we should do that
 
 
 #### Docker
@@ -63,5 +65,6 @@ docker tag techdemo-heigl-kaitoua techdemo-heigl-kaitoua
 
 Microsoft Azure
 Create a resource -> Create Web App
+
 
 
