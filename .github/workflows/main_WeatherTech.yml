@@ -42,6 +42,14 @@ jobs:
         login-server: contoso.azurecr.io
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
+    - uses: azure/docker-login@v1
+      with:
+        login-server: index.docker.io
+        username: ${{ secrets.DOCKERIO_USERNAME }}
+        password: ${{ secrets.DOCKERIO_PASSWORD }}
+    - run: |
+        docker pull contoso.azurecr.io/private/image:latest
+        docker pull private/image:latest
 
 
     - name: 'Build and push image'
