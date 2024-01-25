@@ -39,7 +39,7 @@ jobs:
     - name: Log in to registry
       uses: azure/docker-login@v1
       with:
-        login-server: https://index.docker.io/v1/
+        login-server: https://index.docker.io
         username: ${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}
         password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
 
@@ -47,7 +47,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}/techdemo-heigl-kaitoua:${{ github.sha }}
+        tags: ${{ secrets.DOCKER_REGISTRY }}/techdemo-heigl-kaitoua:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
