@@ -47,8 +47,8 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
+        username:  ${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
     - run: |
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/techdemo-heigl-kaitoua:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/techdemo-heigl-kaitoua:${{ github.sha }}
