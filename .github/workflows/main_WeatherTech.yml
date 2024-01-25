@@ -43,12 +43,17 @@ jobs:
         username: ${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}
         password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
 
-    - name: Build and push container image to registry
-      uses: docker/build-push-action@v3
+    - name: 'Build and push image'
+      uses: azure/docker-login@v1
       with:
-        push: true
-        tags: ${{ secrets.DOCKER_REGISTRY }}/techdemo-heigl-kaitoua:${{ github.sha }}
-        file: ./Dockerfile
+        login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+    - run: |
+            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
+            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
+
+
 
   deploy:
     runs-on: ubuntu-latest
