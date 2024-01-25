@@ -50,7 +50,7 @@ jobs:
         username:  ${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}
         password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
     - run: |
-            docker build .\.\.\techdemo_heigl_kaitoua\techdemo-heigl-kaitoua\techdemo-heigl-kaitoua\Dockerfile -t contoso.azurecr.io/techdemo-heigl-kaitoua:${{ github.sha }} .\.\.\techdemo_heigl_kaitoua\techdemo-heigl-kaitoua\techdemo-heigl-kaitoua\Dockerfile
+            docker build .\..\..\techdemo_heigl_kaitoua\techdemo-heigl-kaitoua\techdemo-heigl-kaitoua\Dockerfile -t contoso.azurecr.io/techdemo-heigl-kaitoua:${{ github.sha }} .\..\..\techdemo_heigl_kaitoua\techdemo-heigl-kaitoua\techdemo-heigl-kaitoua\Dockerfile
             docker push contoso.azurecr.io/techdemo-heigl-kaitoua:${{ github.sha }}
 
 
