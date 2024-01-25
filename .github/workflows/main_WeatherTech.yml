@@ -37,7 +37,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Log in to registry
-      uses: azure/docker-login@v1
+      uses: docker/docker-login@v1
       with:
         login-server: https://index.docker.io
         username: ${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}
