@@ -44,7 +44,7 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
     - run: |
         docker pull heiglanz/techdemo-heigl-kaitoua:latest
-        docker build ././techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile -t heiglanz/techdemo-heigl-kaitoua:latest
+        docker build ./../../techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile -t heiglanz/techdemo-heigl-kaitoua:latest
         docker push heiglanz/techdemo-heigl-kaitoua:latest
 
 
