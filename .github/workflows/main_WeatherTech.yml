@@ -49,7 +49,7 @@ jobs:
        context: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua
        file: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile
        push: true
-       tags: heiglanze/techdemo-heigl-kaitoua:latest
+       tags: heiglanz/techdemo-heigl-kaitoua:latest
 
 
   deploy:
