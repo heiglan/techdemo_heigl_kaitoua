@@ -40,8 +40,8 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.heiglanz }}
-        password: ${{ secrets.dckr_pat_gSXJ1ZTO4mP2c9ioXF07I89HKgs }}
+        username: ${{ secrets.AzureAppService_heiglanz_d32d53f5577a480892163acc7962d7dc }}
+        password: ${{ secrets.AzureAppService_dckr_pat_gSXJ1ZTO4mP2c9ioXF07I89HKgs_4c5dad060f9e4c22b9863199cbd9a049 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
