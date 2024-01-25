@@ -45,7 +45,7 @@ jobs:
     - run: |
        docker pull heiglanz/techdemo-heigl-kaitoua:latest
        docker build -t heiglanz/techdemo-heigl-kaitoua:latest -f techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile techdemo-heigl-kaitoua/techdemo-heigl-kaitoua
-       docker push heiglanz/techdemo-heigl-kaitoua:latest
+       docker push heiglanz/techdemo-heigl-kaitoua
 
 
 
