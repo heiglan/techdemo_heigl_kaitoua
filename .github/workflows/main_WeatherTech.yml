@@ -44,7 +44,7 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
 
     - name: 'Build and push image'
-      uses: azure/build-push-action@v2
+      uses: docker/build-push-action@v2
       with:
        context: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua
        file: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile
