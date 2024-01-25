@@ -40,8 +40,8 @@ jobs:
       uses: docker/login-action@v1
       with:
         login-server: https://index.docker.io
-        username: ${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: 'Build and push image'
       uses: docker/build-push-action@v2
