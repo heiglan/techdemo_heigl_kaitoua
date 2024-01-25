@@ -34,7 +34,7 @@ jobs:
       working-directory: ./techdemo-heigl-kaitoua/UnitTests
 
     - name: Set up Docker Buildx
-      uses: azure/setup-buildx-action@v2
+      uses: docker/setup-buildx-action@v2
 
     - name: Log in to registry
       uses: azure/docker-login@v1
@@ -44,12 +44,13 @@ jobs:
         password: ${{ secrets.AzureAppService_ContainerPassword_4c5dad060f9e4c22b9863199cbd9a049 }}
 
     - name: 'Build and push image'
-      uses: azure/build-push-action@v2
+      uses: docker/build-push-action@v2
       with:
        context: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua
-       file: Dockerfile
+       file: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile
        push: true
        tags: contoso.azurecr.io/techdemo-heigl-kaitoua:${{ github.sha }}
+
 
   deploy:
     runs-on: ubuntu-latest
