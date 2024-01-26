@@ -65,4 +65,4 @@ jobs:
         app-name: 'WeatherTech'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_b27e369a6efa41869ab78bd8accf7b8a }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_d32d53f5577a480892163acc7962d7dc }}/techdemo-heigl-kaitoua:${{ github.sha }}'
+        images: 'index.docker.io/heiglanz/techdemo-heigl-kaitoua:latest'
