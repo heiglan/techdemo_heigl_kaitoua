@@ -43,8 +43,8 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        context: ./techdemo-heigl-kaitoua
-        file: ./techdemo-heigl-kaitoua/Dockerfile
+        context: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua
+        file: ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile
         push: true
         tags: heiglanz/techdemo-heigl-kaitoua:latest
 
