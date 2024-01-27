@@ -46,11 +46,14 @@ jobs:
         push: true
         tags: heiglanz/techdemo-heigl-kaitoua:latest
 
-    - name: Run Docker container
-      run: docker run -d --name weathertech heiglanz/techdemo-heigl-kaitoua:latest
+    - name: Build Docker image for testing
+      run: docker build --target test -t techdemo:test -f ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile .
+
+    - name: Run Docker container for tests
+      run: docker run --name techdemo-test-container -d techdemo:test
 
     - name: Execute tests in Docker container
-      run: docker exec weathertech dotnet test ./techdemo-heigl-kaitoua/UnitTests --no-build -c Release
+      run: docker exec techdemo-test-container dotnet test ./techdemo-heigl-kaitoua/UnitTests --no-build -c Release
 
   deploy:
     runs-on: ubuntu-latest
