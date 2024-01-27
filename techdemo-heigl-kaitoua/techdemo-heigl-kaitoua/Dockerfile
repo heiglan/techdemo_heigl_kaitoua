@@ -1,9 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["techdemo-heigl-kaitoua.csproj", "./"]
+COPY ["techdemo-heigl-kaitoua/techdemo-heigl-kaitoua.csproj", "./"]
 RUN dotnet restore "techdemo-heigl-kaitoua.csproj"
-COPY . .
+COPY techdemo-heigl-kaitoua/ ./
 RUN dotnet build "techdemo-heigl-kaitoua.csproj" -c Release -o /app/build
+
 
 FROM build AS test
 RUN dotnet test "techdemo-heigl-kaitoua.csproj" --no-build -c Release
