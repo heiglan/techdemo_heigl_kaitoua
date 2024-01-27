@@ -1,5 +1,9 @@
 # techdemo_heigl_kaitoua
 
+## Autoren
+
+Abdullah Kaitoua, Anzhelika Heigl
+
 ## Checkliste :
 
 ### Einführung und Grundlagen
@@ -14,41 +18,38 @@
 
 ### Testing
 - [x] Unit Tests geschrieben und automatisiert
-- [ ] Integrationstests implementiert (optional)
-- [ ] End-to-End Tests eingerichtet (optional)
+~~- [ ] Integrationstests implementiert (optional)~~
+~~- [ ] End-to-End Tests eingerichtet (optional)~~
 
 ### Deployment-Strategien
 - [x] Deployment-Strategien identifizieren
-- [ ] Rollback-Strategien (optional)
+~~- [ ] Rollback-Strategien (optional)~~
 
 ### Containerisierung
 - [x] Docker oder ähnliche Technologien eingesetzt
 - [x] Integration in eine Build-Pipeline
 
 ### Konfigurationsmanagement
-- [ ] Konfigurationsdateien versioniert und zentralisiert
-- [ ] Verwendung in einer Build-Pipeline
+- [x] Konfigurationsdateien versioniert und zentralisiert
+- [x] Verwendung in einer Build-Pipeline
 
 ### Feedback-Schleifen & Benachrichtigungen
-- [ ] Feedback von Stakeholdern eingeholt und implementiert
-- [ ] Developer Benachrichtigungen
+~~- [ ] Feedback von Stakeholdern eingeholt und implementiert~~
+- [x] Developer Benachrichtigungen
 
 ### Sicherheit
-keine Zugangsdaten vorhanden
-- [ ] Zugangsdaten sicher hinterlegt
+- [x] Zugangsdaten sicher hinterlegt
 
 ### Datenbanken
 keine Datenbank vorhanden
-- [ ] Datenbank-Migrationen automatisiert
-- [ ] Datenbank-Backups und Recovery-Pläne
+~~- [ ] Datenbank-Migrationen automatisiert~~
+~~- [ ] Datenbank-Backups und Recovery-Pläne~~
 
 ### Abschluss und Dokumentation
 - [ ] Projekt-Dokumentation vervollständigt
-- [ ]  
 
 
 ## Dokumentation
-- we should do that ok gfg
 
 
 #### Docker
