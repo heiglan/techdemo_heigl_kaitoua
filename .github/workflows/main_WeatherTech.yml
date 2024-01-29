@@ -47,7 +47,7 @@ jobs:
         tags: heiglanz/techdemo-heigl-kaitoua:latest
 
     - name: Build Docker image for testing
-      run: docker build --target test -t techdemo:test -f ./techdemo-heigl-kaitoua/Dockerfile .
+      run: docker build --target test -t techdemo:test -f ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile .
 
     - name: Run Docker container for tests
       run: docker run --name techdemo-test-container -d techdemo:test
