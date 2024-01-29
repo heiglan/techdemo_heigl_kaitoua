@@ -8,7 +8,7 @@ RUN dotnet build "techdemo-heigl-kaitoua.csproj" -c Release -o /app/build
 
 # Step 2: Run tests
 FROM build AS test
-RUN dotnet test "UnitTests/UnitTests.csproj" --no-build -c Release
+RUN dotnet test "UnitTests.csproj" --no-build -c Release
 
 # Step 3: Publish the application
 FROM build AS publish
