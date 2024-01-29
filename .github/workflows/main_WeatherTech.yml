@@ -47,13 +47,13 @@ jobs:
         tags: heiglanz/techdemo-heigl-kaitoua:latest
 
     - name: Build Docker image for testing
-      run: docker build --target test -t techdemo:test -f ./techdemo-heigl-kaitoua/techdemo-heigl-kaitoua/Dockerfile .
+      run: docker build --target test -t techdemo:test .
 
     - name: Run Docker container for tests
       run: docker run --name techdemo-test-container -d techdemo:test
 
     - name: Execute tests in Docker container
-      run: docker exec techdemo-test-container dotnet test ./techdemo-heigl-kaitoua/UnitTests/UnitTests.csproj --no-build -c Release
+      run: docker exec techdemo-test-container dotnet test --no-build -c Release
 
 
   deploy:
