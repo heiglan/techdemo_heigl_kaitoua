@@ -52,6 +52,7 @@ jobs:
     - name: Execute tests in Docker container
       run: docker exec techdemo-test-container dotnet test /src/UnitTests/UnitTests.csproj --no-build -c Release
 
+
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
